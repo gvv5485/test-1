@@ -14,3 +14,6 @@ ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
 ContactListProject/build/classes/com/mycontacts/Contact.class
 ContactListProject/build/classes/com/mycontacts/ContactDAO.class
 *.class
+ContactListProject/.classpath
+ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
+*.class
