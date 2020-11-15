@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "Contacts")
 public class Contact {
 
-	private static long idCounter = 0;
+	private static long idCounter = 5;
 
 
 	public static synchronized String createID()
@@ -27,11 +27,21 @@ public class Contact {
 	public Contact(String ContactName, String ContactNumber,String id) {
 		this.ContactName = ContactName;
 		this.ContactNumber = ContactNumber;
-		this.id=createID();
+		this.id=id;
 	}
 	
+	
+	
 	public String getContactName() {
+		// this.id=createID();
 		return ContactName;
+		
+	}
+	
+	public String createContact () {
+		 this.id=createID();
+		 
+		 return id;
 		
 	}
 	@XmlElement
@@ -40,7 +50,7 @@ public class Contact {
 	}
 
 	public String getContactNumber() {
-		this.id=createID();
+		//this.id=id;
 		return ContactNumber;
 	}
 	@XmlElement
@@ -54,7 +64,7 @@ public class Contact {
 	}
 	@XmlElement
 	public void setContactid(String id) {
-		this.id = createID();
+		this.id = id;
 	}
 	 
 }

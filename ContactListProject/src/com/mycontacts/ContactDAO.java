@@ -32,7 +32,7 @@ public class ContactDAO {
 	}
 	public static Contact addContact(Contact cont)
 	{
-		contMap.put(cont.getContactName(), cont);
+		contMap.put(cont.createContact(), cont);
 		
 		return cont;
 		

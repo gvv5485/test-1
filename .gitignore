@@ -1,0 +1,7 @@
+
+*.class
+ContactListProject/.settings/org.eclipse.wst.ws.service.policy.prefs
+ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
+ContactListProject/.classpath
+ContactListProject/.classpath
+.vscode/launch.json
