@@ -5,3 +5,7 @@ ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
 ContactListProject/.classpath
 ContactListProject/.classpath
 .vscode/launch.json
+ContactListProject/.classpath
+ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
+*.class
+contbk/.DS_Store
