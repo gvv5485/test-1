@@ -9,3 +9,7 @@ ContactListProject/.classpath
 ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
 *.class
 contbk/.DS_Store
+ContactListProject/.classpath
+ContactListProject/.settings/org.eclipse.wst.common.project.facet.core.xml
+ContactListProject/build/classes/com/mycontacts/Contact.class
+ContactListProject/build/classes/com/mycontacts/ContactDAO.class
