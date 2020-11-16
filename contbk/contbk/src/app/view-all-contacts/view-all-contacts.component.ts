@@ -12,6 +12,7 @@ export class ViewAllContactsComponent implements OnInit {
 
 
   contact: Contact;
+  // contactName : String;
   id:String;
   data: any;
   constructor(private service:ContactServiceService,private router:Router){
@@ -26,12 +27,24 @@ getAllContacts(){
     this.data=data;
 })
 }
-deleteContact(contactid :String){
-  console.log(contactid);
-  this.service.deleteContact(contactid); 
-}
+deleteContact(contact : Contact){
+  console.log(contact);
+// console.log ("I am here ")
+  alert(JSON.stringify(contact));
+  // console.log("am here as well")
+  this.service.deleteContact(contact).subscribe(data =>{ 
+    // alert(JSON.stringify(data))
+    // alert(data);
+    console.groupCollapsed(data);
+    if(data != null) {
+      alert("Deleted Successfully");
+  console.log(data);
+
+  // this.service.deleteContact(contactName); 
+};
+
+});
 
 }
-
-
+}
 
