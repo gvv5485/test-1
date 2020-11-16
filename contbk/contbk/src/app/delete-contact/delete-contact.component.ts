@@ -17,7 +17,7 @@ export class DeleteContactComponent implements OnInit {
   }
   DeleteContact(){
     alert(JSON.stringify(this.conn));
-    this.service.deleteContact(this.conn.id).subscribe(data =>{ 
+    this.service.deleteContact(this.conn).subscribe(data =>{ 
       alert(JSON.stringify(data))
       alert(data);
       console.groupCollapsed(data);

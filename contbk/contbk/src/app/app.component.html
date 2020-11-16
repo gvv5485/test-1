@@ -11,20 +11,23 @@
   
   
 </div>
+<div>
 <form (ngSubmit)="getContact()">
   <div id="searchform">
-  <input type="text" name="t1" placeholder="Search for contacts" [(ngModel)]= conn.contactName>
+  <input type="text" name="t1" placeholder="Search for contacts" [(ngModel)]= "conn.contactName">
   <button  id="search"type="submit">Search</button>
 
   <table  id = "table" cellpadding ="10" cellspacing="10"*ngIf="data" >
-    <tr *ngFor="let conn of data">
+    <tr>
       <td>{{conn.contactName}}</td>
       <td>{{conn.contactNumber}}</td> 
-      <td>{{conn.id}}</td> 
+      <!-- <td>{{conn.id}}</td>  -->
       </tr>
     </table>
   </div>
+
 </form>
+</div>
 
 </body> 
 <router-outlet></router-outlet>
