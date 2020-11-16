@@ -12,7 +12,7 @@ export class ContactServiceService {
   findDepartment(contactName: String): Observable<Contact> 
   {
     let url =  'http://localhost:8099/ContactListProject/rest/Contacts';
-    return this.http.get<Contact>(url + contactName);
+    return this.http.get<Contact>(url +'/'+ contactName);
   }
   
   getContacts(){
@@ -23,18 +23,31 @@ return this.http.get(url);
 let url='http://localhost:8099/ContactListProject/rest/Contacts';
 return this.http.post(url,contact);
   }
-  ModifyContact(contactid: String){
-    let url = 'http://localhost:8099/ContactListProject/rest/Contacts';
-    return this.http.put(url,contactid);
+  ModifyContact(contact: Contact){
+    let url = 'http://localhost:8099/ContactListProject/rest/Contacts/';
+    return this.http.put(url,contact);
   }
-  deleteContact(contactid: String) 
-  {
-    console.log(contactid);
-    console.log(contactid+" deleted success");
+  // deleteContact(contactName: String) 
+  // {
+  //   console.log(contactName);
+  //   // console.log(contactName+" deleted success");
   
-    let url = 'http://localhost:8099/ContactListProject/rest/Contacts/'+contactid+'';
+  //   let url = 'http://localhost:8099/ContactListProject/rest/Contacts/'+contactName+'/';
+  //   console.log(url);
+  //   // console.log('I am here ')
+  //    return this.http.delete(url);  
+
+               
+  // }
+
+  deleteContact(contact :Contact ) 
+  {
+    console.log(contact);
+    console.log(contact+" deleted success");
+  
+    let url = 'http://localhost:8099/ContactListProject/rest/Contacts/'+contact;
     console.log(url);
-    console.log('I am here ')
+    // console.log('I am here ')
      return this.http.delete(url);  
 
                

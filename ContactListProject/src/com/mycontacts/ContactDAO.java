@@ -11,19 +11,19 @@ public class ContactDAO {
 	private static final Map<String, Contact> contMap = new HashMap<String, Contact>();
 	
 	static {
-		initConts();
+		//initConts();
 	}
 	
-	private static void initConts() {
-		Contact cont1 = new Contact("maddy","9388838529","1");
-		Contact cont2 = new Contact("Sreehari","9074379488","2");
-		Contact cont3 = new Contact("Mythili","8086277942","3");
-		
-	contMap.put(cont1.getContactName(), cont1);
-	contMap.put(cont2.getContactName(), cont2);
-	contMap.put(cont3.getContactName(), cont3);	
-	
-	}
+//	private static void initConts() {
+//		Contact cont1 = new Contact("maddy","9388838529","1");
+//		Contact cont2 = new Contact("Sreehari","9074379488","2");
+//		Contact cont3 = new Contact("Mythili","8086277942","3");
+//		
+//	contMap.put(cont1.getContactName(), cont1);
+//	contMap.put(cont2.getContactName(), cont2);
+//	contMap.put(cont3.getContactName(), cont3);	
+//	
+//	}
 
 	public static Contact getContact(String ContName)
 	{
@@ -44,8 +44,16 @@ public class ContactDAO {
 		return cont;
 		
 	}
-	public static void deleteContact(String id) {
-		contMap.remove(id);
+	
+//	public static void deleteContact(String id) {
+//		contMap.clear();
+//	
+//		
+//	}
+	
+
+	public static void deleteContact(String contactName) {
+		contMap.remove(contactName);
 	
 		
 	}

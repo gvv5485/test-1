@@ -9,17 +9,28 @@ import { ContactServiceService } from '../contact-service.service';
 })
 export class ModifyContactComponent implements OnInit {
 
-  // conn: Contact = new Contact();
+   conn: Contact = new Contact();
   constructor(private service : ContactServiceService) { 
   }
 
   ngOnInit(): void {
   }
 
-  ModifyContact(contactid :String){
-    console.log(contactid);
-    this.service.ModifyContact(contactid); 
-  }
+  ModifyContact(conn : Contact){
+
+
+    alert(JSON.stringify(this.conn));
+    this.service.ModifyContact(this.conn).subscribe(data =>{ 
+      alert(JSON.stringify(data))
+      alert(data);
+      console.groupCollapsed(data);
+      if(data != null) {
+        alert("Modified Successfully");
+    console.log(conn);
+    // this.service.ModifyContact(conn.contactName); 
+      }
+  });
+}
   // ModifyContact(contactid : string){
 
 
@@ -33,4 +44,5 @@ export class ModifyContactComponent implements OnInit {
     //   }
     // });
   // }
+
 }

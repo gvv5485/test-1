@@ -17,6 +17,7 @@ import javax.ws.rs.core.MediaType;
 public class ContactList {
 
 	@GET
+	
     @Produces( MediaType.APPLICATION_JSON)
 public List<Contact>getContacts(){
 	List<Contact>listOfContacts=ContactDAO.getAllContact();
@@ -45,10 +46,10 @@ public List<Contact>getContacts(){
     }
  
     @DELETE
-    @Path("/{ContactName}")
+   @Path("/{ContactName}")
     @Produces( MediaType.APPLICATION_JSON)
-    public void deleteContact(@PathParam("id") String id) {
-        ContactDAO.deleteContact(id);
+    public void deleteContact(@PathParam("ContactName")  String contactName) {
+        ContactDAO.deleteContact(contactName);
     }
 
 }

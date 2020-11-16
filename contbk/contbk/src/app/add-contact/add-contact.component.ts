@@ -12,8 +12,8 @@ export class AddContactComponent implements OnInit {
   conn: Contact = new Contact();
   data: any;
     constructor(private service : ContactServiceService) { 
-      this.conn.contactName = '';
-      this.conn.contactNumber="";
+      this.conn.contactName ='';
+      this.conn.contactNumber='';
      
     }
   
@@ -25,10 +25,10 @@ export class AddContactComponent implements OnInit {
     })
     }
     addContacts(){
-      alert(JSON.stringify(this.conn));
+      // alert(JSON.stringify(this.conn));
       this.service.addContacts(this.conn).subscribe(data =>{ 
         alert(JSON.stringify(data))
-        alert(data);
+        // alert(data);
         this.data= data;
         console.groupCollapsed(data);
         if(data != null) {

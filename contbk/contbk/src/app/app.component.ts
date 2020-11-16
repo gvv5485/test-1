@@ -13,11 +13,12 @@ export class AppComponent  {
   title = 'ContactBook';
   data: any;
   conn: Contact = new Contact();
+  
   constructor(private service: ContactServiceService){
-    this.conn.contactName="Search here";
+    this.conn.contactName="";
   }
 getContact(){
-  alert(this.conn.contactName);
+  // alert(this.conn.contactName);
   this.service.findDepartment(this.conn.contactName)
   .subscribe((data: Contact) => {
       this.conn = data;
