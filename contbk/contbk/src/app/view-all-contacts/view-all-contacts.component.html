@@ -5,8 +5,8 @@
           <td>{{contact.contactName}}</td>
           <td>{{contact.contactNumber}}</td> 
           <td>{{contact.contactid}}</td> 
-          <td><button routerLink="/modify" id="table">Modify</button></td>
-          <td><button (click)="deleteContact(contact.contactName)">Delete</button></td>
+          <td><button routerLink="/modify" id="table"><span style='font-size:20px;'>&#9742;</span>Modify</button></td>
+          <td><button  (click)="deleteContact(contact.contactName)" ><span style='font-size:20px;'>&#9742;</span>Delete</button></td>
         </tr>
       </table>
     </body>

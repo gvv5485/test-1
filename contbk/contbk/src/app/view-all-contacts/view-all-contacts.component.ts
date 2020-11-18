@@ -30,7 +30,7 @@ getAllContacts(){
 deleteContact(contact : Contact){
   console.log(contact);
 // console.log ("I am here ")
-  alert(JSON.stringify(contact));
+  // alert(JSON.stringify(contact));
   // console.log("am here as well")
   this.service.deleteContact(contact).subscribe(data =>{ 
     // alert(JSON.stringify(data))
@@ -39,12 +39,15 @@ deleteContact(contact : Contact){
     if(data != null) {
       alert("Deleted Successfully");
   console.log(data);
+  
+  window.location.reload();
 
   // this.service.deleteContact(contactName); 
 };
 
 });
-
+// alert(contact.contactName+"Deleted Successfully");
+window.location.reload();
 }
 }
 

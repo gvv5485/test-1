@@ -27,7 +27,7 @@ export class AddContactComponent implements OnInit {
     addContacts(){
       // alert(JSON.stringify(this.conn));
       this.service.addContacts(this.conn).subscribe(data =>{ 
-        alert(JSON.stringify(data))
+        // alert(JSON.stringify(data))
         // alert(data);
         this.data= data;
         console.groupCollapsed(data);

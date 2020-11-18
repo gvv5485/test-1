@@ -7,12 +7,12 @@
      
   }
   h1 {
-    text-shadow: 0px 2px 5px rgb(7, 7, 7);
+    text-shadow: 0px 2px 5px rgb(8, 8, 8);
   }
   
   
   body{
-    background-color: rgb(5, 78, 100);
+    background-color: rgb(9, 171, 177);
     margin-left: 25%;
     margin-right: 25%;
     height: 100%;
@@ -22,6 +22,7 @@
 h1{
     text-align: center;
     padding-top: 10%;
+    color: white;
 }
 #header{
     display: flex;
